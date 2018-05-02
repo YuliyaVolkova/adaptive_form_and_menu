@@ -1,0 +1,19 @@
+include base/_mixins
+doctype html
+html(lang="ru")
+  head
+    meta(charset="utf-8")
+    meta(name="description" content="")
+    meta(name="keywords" content="")
+    meta(content="IE=edge" http-equiv="X-UA-Compatible")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0" )
+    title "Тестовое задание от Hotels.ru: верстка меню и формы поиска"
+  body
+    //[if lt IE 8]> <p class="chromeframe">Похоже, что ты используешь устаревший браузер, друг. Пожалуйста, <a href="http:// browsehappy.com/">скачай новый браузер абсолютно бесплатно</a> или <a href="http://www.google.com/chromeframe/?redirect=true">активируй Google Chrome Frame</a></p> <![endif]
+    .wrapper
+      include components/menu
+      include components/search
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js")
+    script(type="text/javascript", src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js")
+    script(type="text/javascript", src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js")
+    script(src="./app/vendors/select2.min.js")

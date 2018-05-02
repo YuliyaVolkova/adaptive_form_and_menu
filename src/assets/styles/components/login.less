@@ -1,0 +1,61 @@
+.login-wrapper {
+	.laptop({
+		order: 2;
+		margin-top: 10/@rem;
+		align-self: flex-end;
+	});
+	.tablet({
+		position: absolute;
+		right: 0;
+		top: 50%;
+		transform: translateY(-85%);
+	});
+}
+
+.login {
+	width: 72/@rem;
+	min-height: 35/@rem;
+	padding: 3/@rem;
+	vertical-align: middle;
+	background-color: transparent;
+	border: transparent;
+	overflow: hidden;
+	outline: none;
+	display: flex;
+	align-items: center;
+	&:hover {	
+		cursor: pointer;
+	}
+	&:hover .login__text {
+		color: @primaryColor;
+	}
+	&:hover .svg-user {
+		fill: @primaryColor;
+		stroke: @primaryColor;
+	}
+}
+
+.svg-user {
+	.size(12/@rem, 15/@rem);
+	margin-right: 10/@rem;
+	fill: @light2-blue;
+	stroke: @light2-blue;
+	flex-shrink: 0;
+	transition: fill 0.3s, stroke 0.3s;
+}
+
+.login__text {
+	display: block;
+	width: 100%;
+	text-align: center;
+	line-height: 1.35;
+	font-size: 14/@rem;
+	font-weight: normal;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	vertical-align: middle;
+	color: @light2-blue;
+	transition: color 0.3s;
+	border-bottom: 1px solid @light2-blue;
+}

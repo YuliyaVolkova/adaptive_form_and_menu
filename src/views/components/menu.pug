@@ -1,0 +1,56 @@
+-
+	var ticketsGuide = ["Group travel", "Ticket types", "Child policy", "Change ticket request", "Cancel tickets"]
+header.header
+	.container
+		nav.menu
+			ul.menu__left
+				li.menu__item
+					a(href="").menu__link
+						span
+							| SEARCH TICKETS
+				li.menu__item
+					a(href="").menu__link
+						span
+							| SAPSAN
+				li.menu__item
+					a(href="").menu__link
+						span
+							| ALLEGRO
+				li.menu__item.menu__item_with-triangle
+					a(href="").menu__link
+						span
+							| TRANS-SIBERIAN
+					ul.menu-dropdown__list
+						each val in ticketsGuide
+							li.menu-dropdown__item
+								a(href="").menu-dropdown__link!=val
+			ul.menu__right
+				li.menu__item.menu__item_with-triangle
+					a(href="").menu__link
+						span
+							| FAQ
+					ul.menu-dropdown__list
+						each val in ticketsGuide
+							li.menu-dropdown__item
+								a(href="").menu-dropdown__link!=val
+				li.menu__item.menu__item_with-triangle.is-active
+					a(href="").menu__link
+						span
+							| TICKETS GUIDE
+					ul.menu-dropdown__list
+						each val in ticketsGuide
+							li.menu-dropdown__item
+								a(href="").menu-dropdown__link!=val
+				li.menu__item.menu__item_with-triangle
+					a(href="").menu__link
+						span
+							| CONTACT US
+					ul.menu-dropdown__list
+						each val in ticketsGuide
+							li.menu-dropdown__item
+								a(href="").menu-dropdown__link!=val
+			.login-wrapper
+				button.login
+					+icon('user', 'svg-user', '12px', '15px')
+					span.login__text
+						| Sign in

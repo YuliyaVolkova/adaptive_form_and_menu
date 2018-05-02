@@ -1,0 +1,84 @@
+@browser-context: 16;
+@primaryColor: rgb(255, 255, 255);
+@menuBg: rgb(84, 173, 216);
+@formBg: rgb(0, 133, 197);
+@placeholder-color: rgb(169, 169, 169);
+@text-color: rgb(0,0,0);
+@menu-item-active: rgb(247, 92, 0);
+@border-color: rgb(215, 215, 215);
+@beige-color: #d7d7d7;
+@light-blue: rgb(191, 216, 235);
+@light2-blue: rgb(168, 213, 235);
+@disabled-bg: rgb(19, 149, 211);
+@disabled-border: rgb(0, 118, 173);
+@disabled-color: rgb(148, 196, 219);
+@orange-color: rgb(247, 94, 2);
+@orange-middle: rgb(222, 83, 0);
+@orange-light: rgb(252, 194, 114);
+@grey-color: rgb(101, 101, 101);
+@light-grey-color: rgb(239, 239, 239);
+@blue-color: rgb(11, 146, 210);
+@grey-102-color: rgb(102, 102, 102);
+
+@desktop: 1300px;
+@laptop:  992px;
+@tablet: 768px;
+@mobile: 480px;
+@small-mobile: 375px;
+
+@em: @browser-context*1em;    // Shorthand for outputting ems, e.g. "12/@em"
+@rem: @browser-context*1rem;
+
+.size(@width; @height: @width) {
+  width: @width;
+  height: @height;
+}
+
+.custom_1800(@rules) {
+  @media screen and (min-width: 1800px) {
+   @rules();
+  }
+}
+
+.custom(@rules) {
+  @media screen and (min-width: @desktop + 1) {
+    @rules();
+  }
+}
+
+.desktop(@rules) {
+	@media screen and (min-width: @laptop + 1) and (max-width: @desktop) {
+		@rules();
+	}
+}
+
+.laptop(@rules) {
+	@media screen and (max-width: @laptop) and (min-width: @tablet + 1) {
+  	@rules();
+	}
+}
+
+.tablet(@rules) {
+	@media screen and (max-width: @tablet) {
+		@rules();
+	}
+}
+
+.mobile(@rules) {
+	@media screen and (max-width: @mobile) {
+		@rules();
+	}
+}
+
+.s-mobile(@rules) {
+	@media screen and (max-width: @small-mobile) {
+		@rules();
+	}
+}
+
+.placeholder(@rules) { 
+  &::-webkit-input-placeholder { @rules(); }
+  &:-moz-placeholder           { @rules(); }
+  &::-moz-placeholder          { @rules(); }
+  &:-ms-input-placeholder      { @rules(); }  
+}
