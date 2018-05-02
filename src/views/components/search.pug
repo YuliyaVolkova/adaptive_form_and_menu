@@ -7,14 +7,14 @@ main.search
 		.search-wrapper
 			h1.title
 				| Russian Train Tickets
-			form.form#search-form(method="POST", action="")
+			form.form#search-form(method="POST", action="./script.php")
 				.form__inner
 					.form__row
 						label.form__label.form__label_depart
 							span.input-title
 								| Departure city:
 							input.input(type="text", name="departureCity", placeholder="Type city name")
-							.input-subtitle 
+							span.input-subtitle 
 								span Ex:
 								ul.input-subtitle__list
 									each val in city
@@ -26,7 +26,7 @@ main.search
 							span.input-title
 								| Arrival city:
 							input.input(type="text", name="arrivalCity", placeholder="Type city name")
-							.input-subtitle 
+							span.input-subtitle 
 								span Ex:
 								ul.input-subtitle__list
 									each val in city
@@ -39,11 +39,11 @@ main.search
 							input.input(type="text", name="departureDate", id="departure-date", placeholder="dd.mm.yyyy", value="")
 							.calendar-icon
 								+icon('calendar', 'svg-calendar', '26px', '26px')
-							.calendar#depart-date-wr
+							span.calendar#depart-date-wr
 						.roundtrip
 							label.roundtrip__label
 								input(type="checkbox", name="roundtrip").roundtrip__checkbox
-								.icon-box
+								span.icon-box
 									+icon('check', 'svg-check', '11px', '9px')
 								span.checkbox__title
 									| Roundtrip
@@ -57,9 +57,9 @@ main.search
 						label.form__select
 							span.input-title
 								| Currency
-							.select-currency
+							span.select-currency
 								select(name="currency", id="currency", style="width:5.375rem")
-									option(value="")
+									option(value="") &nbsp;
 									option(value="USD") USD
 									option(value="Rub", selected="selected") Rub
 									option(value="GBR") GBR

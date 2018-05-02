@@ -10,7 +10,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 module.exports = merge(common, {
   devtool: 'source-map',
   output: { 
-     publicPath: '/portfolio_pages/',
+     publicPath: '/adaptiv_forma_end_menu/',
   },
 
   plugins: [
