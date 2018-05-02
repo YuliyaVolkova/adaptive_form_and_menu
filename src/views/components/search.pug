@@ -16,9 +16,9 @@ main.search
 							input.input(type="text", name="departureCity", placeholder="Type city name")
 							span.input-subtitle 
 								span Ex:
-								ul.input-subtitle__list
+								span.input-subtitle__list
 									each val in city
-										li.input-subtitle__item
+										span.input-subtitle__item
 											a(href="").input-subtitle__link!=val 
 						a(href="").swap-direction
 							+icon('swap', 'svg-swap', '30px', '16px')
@@ -28,16 +28,16 @@ main.search
 							input.input(type="text", name="arrivalCity", placeholder="Type city name")
 							span.input-subtitle 
 								span Ex:
-								ul.input-subtitle__list
+								span.input-subtitle__list
 									each val in city
-										li.input-subtitle__item
+										span.input-subtitle__item
 											a(href="").input-subtitle__link!=val 
 					.form__row
 						label.form__label.form__label_date
 							span.input-title
 								| Departure date:
 							input.input(type="text", name="departureDate", id="departure-date", placeholder="dd.mm.yyyy", value="")
-							.calendar-icon
+							span.calendar-icon
 								+icon('calendar', 'svg-calendar', '26px', '26px')
 							span.calendar#depart-date-wr
 						.roundtrip
@@ -51,9 +51,9 @@ main.search
 							span.input-title
 								| Return date:
 							input.input(type="text", name="returnDate", placeholder="dd.mm.yyyy", id="return-date", value="")
-							.calendar-icon
+							span.calendar-icon
 								+icon('calendar', 'svg-calendar', '26px', '26px')
-							.calendar#return-date-wr
+							span.calendar#return-date-wr
 						label.form__select
 							span.input-title
 								| Currency
@@ -65,8 +65,8 @@ main.search
 									option(value="GBR") GBR
 									option(value="EUR") EUR
 									option(value="CHF") CHF
-								.select-js-unload
-									.select-button
+								span.select-js-unload
+									span.select-button
 						.button-search-wrapper
 							button.button-search(type='submit')#search-submit
 								+icon('search', 'svg-search', '18px', '18px')
