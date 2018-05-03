@@ -11,6 +11,24 @@ const $ = require('jquery');
 
 $(document).ready(() => {
 
+  const $menuLeft = $('.menu__left');
+  const $menuRight = $('.menu__right');
+  const toggleActiveClass = e => {
+    e.preventDefault();
+    e.stopPropagation(); 
+    const $parentLi = e.target.closest('li');
+    if($($parentLi).hasClass('is-active')) {
+      $($parentLi).removeClass('is-active');
+    }
+    else {
+      $($menuLeft).children().removeClass('is-active');
+      $($menuRight).children().removeClass('is-active');
+      $($parentLi).addClass('is-active');
+    }
+  };
+  $menuLeft.on('click', toggleActiveClass);
+  $menuRight.on('click', toggleActiveClass);
+
   const returnDateInput = $('input[name="returnDate"]');
   const currentDay = moment().format('DD.MM.YYYY');
   const currencyInput = $('#currency');
@@ -146,5 +164,5 @@ $(document).ready(() => {
     }
   });
 });
-function requireAll(r) { r.keys().forEach(r); }
-requireAll(require.context('../assets/images/sprites/to_sprite/', true));
+//function requireAll(r) { r.keys().forEach(r); }
+//requireAll(require.context('../assets/images/sprites/to_sprite/', true));

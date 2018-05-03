@@ -316,7 +316,6 @@ module.exports = {
     extractSelect2CSS,
     extractNormalizeCSS,
     extractDaterangepicker,
-
     extractSass,
     extractLess,
 
